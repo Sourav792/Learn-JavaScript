@@ -33,3 +33,5 @@ let url = "https://souravsingh%20webdeveloper";
 // console.log(url.includes('hello'));
 
 console.log(gameName.split('-'));
+
+// strings interpulation best way code in backticks ex.- ` my name is ${Name}`
