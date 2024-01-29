@@ -14,3 +14,6 @@ console.table([souravProfession, accountId, city, accountNo, accountState]);
 prefer not to use var
 because of issue in block scope and functional scope
 */
+
+console.warn('get a warning');
+console.error('error occured')
