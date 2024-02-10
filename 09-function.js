@@ -73,4 +73,4 @@ console.log(handleArray(myArray));
 console.log(handleArray([2000, 230, 54, 100, 230]));
 */
 
-// part 3
+// part 3 (arrow function)
