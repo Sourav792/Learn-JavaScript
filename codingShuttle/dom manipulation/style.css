@@ -1,0 +1,27 @@
+ /* []  {} */
+
+ .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 450px;
+    row-gap: 10px;
+    background-color: salmon;
+    padding: 10px;
+ }
+
+ .box {
+    display: flex;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    background: aqua;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .round-border {
+    border-radius: 50%;
+    border: 5px solid violet;
+ }

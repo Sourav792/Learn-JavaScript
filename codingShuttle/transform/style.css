@@ -1,0 +1,29 @@
+.container {
+    width: 400px;
+    background-color: aquamarine;
+    margin-top: 150px; 
+    margin-left: 400px;
+    height: 400px;
+}
+.box {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    transform: rotate(45deg);
+    transform-origin: top;
+}
+.box1 {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    transform: rotate(45deg);
+    transform-origin:  bottom right;
+}
