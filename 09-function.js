@@ -74,3 +74,69 @@ console.log(handleArray([2000, 230, 54, 100, 230]));
 */
 
 // part 3 (arrow function)
+
+let user = {
+  username: "sourav",
+  email: "sourav@google.com",
+  welcomeMassage: function() {
+    console.log(`${this.username}, welcome to google`);
+    // console.log(this);
+  }
+}
+// user.welcomeMassage()
+// user.username = "gourav"
+// user.welcomeMassage()
+
+// console.log(this); // returns a empty object
+// browser ka global object = window object
+
+// function chai() {
+//   let username = "sourav"
+//   // console.log(this);  returns global object
+//   // console.log(this.username); // returns undefined (this keyword used in object not function)
+// }
+// chai()
+
+// let chai = function() {
+//   let usernmae = "sourav"
+//   console.log(this.username); // returns undefined
+// }
+// chai()
+
+// let chai = () => {
+//   let usernmae = "sourav"
+//   console.log(this.username); // returns undefined
+//   console.log(this); // returns empty object
+// }
+// chai()
+
+// explecit returns
+// let addTwo = (num1, num2) => {
+//   return num1 + num2;
+// }
+// curly braces me rap kiya to returns keyword likhna padega
+// let addTwo = (num1, num2) => num1 + num2 ; 
+
+// parenthesis me rap kiya to returns keyword nahi likhna padega
+// implecit returns
+// let addTwo = (num1, num2) => (num1 + num2) ;
+let returnsObject = () => ({username: "sourav"}); // arrow function ke ander object ko returns kerne k liye object ({object}) ko parenthesis ke under rap kerna padega
+// console.log(returnsObject());
+
+// IIFE = Immediately Invoked Function Expressions (IIFE)
+// (function defination) (execution) // Avoid polluting the global namespace
+
+(function database() {
+  // named IIFE
+  console.log('DB CONNECTED');
+}) ();
+// database()
+
+(() => {
+  console.log("DB CONNECTED TWO");
+}) ();
+
+
+((name) => {
+  console.log(`DB CONNECTED TWO ${name}`);
+}) ("s1354@");
