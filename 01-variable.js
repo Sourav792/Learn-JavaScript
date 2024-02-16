@@ -1,4 +1,4 @@
-// {}  [] 
+//  Brendan Eich founder of javascript 
 
 const souravProfession = "Developer";
 let accountId = 1234421;
