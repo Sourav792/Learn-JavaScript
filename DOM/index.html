@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom -- Document Object Model</title>
+    <style>
+      body {
+         background-color: black;
+         color: white;
+      }
+    </style>
+ </head>
+ <body>
+    <!-- 
+      [ DOM -- tree structure ] 
+        document.getElementById('').
+        document.getElementByClass('').
+        document.quarySelector('').
+        document.quarySelectorAll('').
+     -->
+     <!-- <div>
+      <h1 class="title" id="title">DOM learning on youtube <span style="display: none;">test text </span></h1>
+      <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo sunt possimus, id natus sequi!</p>
+     </div>
+
+     <input type="text" id="">
+
+     <ul>
+      <li class="list-item">hello</li>
+      <li class="list-item">hello</li>
+      <li class="list-item">hello</li>
+     </ul> -->
+  
+     <!-- <div class="parent">
+      <div class="day">monday</div>
+      <div class="day">tuesday</div>
+      <div class="day">wednesday</div>
+      <div class="day">thursday</div>
+      <div class="day">friday</div>
+      <div class="day">saturday</div>
+      <div class="day">sunday</div>
+     </div> -->
+
+    <!-- <script src="script.js"></script> -->
+ </body>
+ <script>
+   let div = document.createElement('div')
+   console.log(div);
+   div.className = "main-div"
+   div.id = Math.round(Math.random() * 10 + 1)
+   div.setAttribute("title", "generated title")
+   div.style.backgroundColor = "#555"
+   div.style.padding = '50px'
+   div.style.fontSize = '50px'
+   div.innerText = 'chai aur code'
+   // let addText = document.createTextNode("hello coders")
+   // div.appendChild(addText)
+
+   document.body.appendChild(div)
+ </script>
+ </html>

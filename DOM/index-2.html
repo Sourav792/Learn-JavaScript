@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body style="background-color: black; color:#fff;">
+    
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+
+</body>
+<script>
+  function addLanguage(languageName) {
+    // complete tree treverse karta hai
+      const li = document.createElement('li')
+      li.innerHTML = `${languageName}`
+      document.querySelector('.language').appendChild(li)
+  }
+//   addLanguage('python')
+//   addLanguage('c++')
+//   addLanguage('java')
+
+  function addOptimiseLang(languageName) {
+    // optimise work code 
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode(languageName))
+    document.querySelector('.language').appendChild(li)
+  }
+  addOptimiseLang('PHP')
+  addOptimiseLang('ruby')
+  addOptimiseLang('nextJs')
+
+  // Edit 
+  const secondLang = document.querySelector('li:nth-child(2)')
+//   secondLang.innerHTML = 'mojo' // (complete treversing not optimise)
+ let newLi = document.createElement('li')
+ newLi.textContent = 'mojo (replace with python)'
+ secondLang.replaceWith(newLi)
+
+ // 2nd example 
+ let firstLanguage = document.querySelector('li:nth-child(1)')
+ firstLanguage.outerHTML = '<li>typeScript</li>'
+
+ // remove 
+ const lastLanguage = document.querySelector("li:last-child")
+ lastLanguage.remove()
+
+
+
+
+  
+</script>
+</html>
