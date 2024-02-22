@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 400px;
+        height: 500px;
+        margin-top: 50px;
+        background-color: #eee;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+      }
+      #result {
+        width: 300px;
+        height: 20px;
+        padding: 5px 20px;
+        margin-bottom: 10px;
+        background-color: #222;
+        color: #fff;
+      }
+      .inputContainer {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-direction: column;
+      }
+      input {
+        padding: 10px;
+        background-color: #222;
+        color: #fff;
+      }
+      input::placeholder{
+        color: #fff;
+      }
+      .info {
+        display: flex;
+        padding: 0 20px;
+        flex-direction: column;
+      }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <div id="result"></div>
+        <form id="form" action="" class="inputContainer">
+            <input id="height" type="text" placeholder="enter your height"  required>
+            <input id="weight" type="text" placeholder="enter your weight" required>
+            <input id="calculate" type="submit" value="Calculate">
+        </form>
+        <div class="info">
+            <h3>BMI Health Guide</h3>
+            <p>BMI range greater than [25.0] (over weight)</p>
+            <p>BMI range less than [18.5] (under weight)</p>
+            <p>BMI between this range [18.5 - 24.9] (healthy range)</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
