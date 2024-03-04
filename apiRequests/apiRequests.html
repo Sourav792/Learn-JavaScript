@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #232323;
+        color: #fff;
+      }
+      .card {
+        margin:50px 100px;
+        width: 300px;
+        height: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+        background-color: #8c8d82;
+      }
+      .card img{
+        width: 100%;
+        height: 70%;
+      }
+      .card h1 {
+        color: yellow;
+      }
+      .card button {
+        color: white;
+        background-color: #232323;
+        padding: 10px 30px;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- [] {} -->
+
+    <!--
+         HTTP response status codes
+        Informational responses (100 – 199)
+        Successful responses (200 – 299)
+        Redirection messages (300 – 399)
+        Client error responses (400 – 499)
+        Server error responses (500 – 599)
+        
+        XMLHttpRequest: readyState property
+        
+        0	UNSENT	Client has been created. open() not called yet.
+        1	OPENED	open() has been called.
+        2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+        3	LOADING	Downloading; responseText holds partial data.
+        4	DONE	The operation is complete.
+    -->
+   
+    <div class="card">
+        <img id="coder_img" src="" alt="">
+        <h1 id="coder_id"></h1>
+        <button id="click">click</button>
+    </div>
+
+</body>
+
+  <script>
+    // const requestURL = 'https://api.github.com/users/gulshan-kalra07' 
+    //    const xhr = new XMLHttpRequest()
+    //    xhr.open('GET', requestURL)
+    // xhr.onreadystatechange = function() {
+    //     console.log(xhr.readyState);
+    //     if (xhr.readyState === 4) {
+    //         // console.log(this.responseText);
+    //         // most of the time response in string format
+    //         // console.log(typeof(this.responseText));
+    //         const data = JSON.parse(this.responseText)
+    //         // parse method convert string in JSON
+    //         // console.log(typeof(data));
+    //         // console.log(data);
+    //         console.log(data.avatar_url);
+    //         console.log(data.login);
+    //     }
+    // }
+    //    xhr.send()
+
+    const clickBtn = document.querySelector('#click');
+ 
+    // let URL = 'https://api.github.com/users/gulshan-kalra07'
+    let URL = 'https://api.github.com/users/Sourav792'
+    const xhr = new XMLHttpRequest()
+       xhr.open('GET', URL)
+    xhr.onreadystatechange = function() {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            // console.log(data.login);
+            // console.log(data.avatar_url);
+            clickBtn.addEventListener("click", function() {
+              let coderId =  document.querySelector('#coder_id')
+              let coderImg =  document.querySelector('#coder_img')
+              coderId.innerText = data.login
+              coderImg.src = data.avatar_url
+            }) 
+        }
+    }
+    xhr.send()
+
+    
+  </script>
+</html>
