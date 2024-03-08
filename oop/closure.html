@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>closure aur lexical scoping</title>
+  </head>
+  <body>
+    <button id="green">green</button>
+    <button id="orange">orange</button>
+    <button id="red">red</button>
+
+    <script>
+    //   document.querySelector('#green').onclick = function() {
+    //       document.body.style.backgroundColor = 'green'
+    //   }
+    //   document.querySelector('#red').onclick = function() {
+    //       document.body.style.backgroundColor = 'red'
+    //   }
+    //   document.querySelector('#orange').onclick = function() {
+    //       document.body.style.backgroundColor = 'orange'
+    //   }
+
+      // ${color}
+      function clickHandler(color) {
+          // document.body.style.backgroundColor = `${color}`
+          return function() {
+            document.body.style.backgroundColor = `${color}`
+          }
+        }
+          document.querySelector('#green').onclick = clickHandler('green')
+          document.querySelector('#orange').onclick = clickHandler('orange')
+          document.querySelector('#red').onclick = clickHandler('red')
+    </script>
+  </body>
+</html>
