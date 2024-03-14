@@ -2,7 +2,7 @@
 // alert(3 +3 -2); // we are using node JS not browser
 // alert("hello");
 
-/*
+/* data type :-
 number => 12 // 2 ki power 53 
 bigInt => 
 string => ""

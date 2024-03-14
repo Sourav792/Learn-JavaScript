@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .form label {
+        background-color: crimson;
+        border-radius: 25px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+      }
+      .form #guessfield {
+          background-color: black;
+          padding: 10px;
+          font-size: 1.2rem;
+          display: flex;
+          color: white;
+      }
+      .form #submit {
+        width: fit-content;
+        padding: 10px 20px;
+        margin: 0 auto;
+        color: white;
+        font-size: 1.2rem;
+        border: none;
+        background-color: rgb(81, 156, 241);
+      }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>number guessing game</h1>
+        <p>try and guess a random number between 1 to 100 </p>
+        <p>you have 10 attempts to guess the right number</p>
+        <form action="" class="form">
+            <label for="guessfield" id="guess">guess the number</label>
+            <input type="text" id="guessfield" class="guessfield">
+            <input id="submit" type="submit" value="submit guess">
+        </form>
+        <div class="result">
+            <p>previous guesses <span class="guesses"></span></p>
+            <p>guesses refraining <span class="lastresult"></span></p>
+            <p class="lowOrHi"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
