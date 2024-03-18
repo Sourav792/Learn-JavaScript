@@ -34,11 +34,11 @@ console.log(typeof undefined); // undefined
  let score = "sourav"; => NaN
 
 console.log(typeof score);
-console.log(typeof (score));
+console.log(typeof (score)); // write as a method
 
 let valueInNumber = Number(score);
 console.log(typeof valueInNumber);
-console.log(valueInNumber);
+console.log(valueInNumber); // NaN 
 
 */
 
@@ -85,6 +85,21 @@ console.log("1" + 2 + 2);
 console.log(1 + 2 + "2");
 */
 
+/* 
+// Prefix nad Postfix 
+let x = 5;
+let y = ++x; // Increment x first, then assign to y
+console.log(x); // Outputs: 6
+console.log(y); // Outputs: 6
+// In this example, the ++ operator is used in its prefix form. It increments the value of x by 1 and then assigns it to y.
+
+let a = 5;
+let b = a++; // Assign a to b first, then increment a
+console.log(a); // Outputs: 6
+console.log(b); // Outputs: 5
+// In this example, the ++ operator is used in its postfix form. It assigns the current value of x to y and then increments x by 1.
+*/
+
 let gameCounter = 100;
 gameCounter++;
 // ++gameCounter;
@@ -92,28 +107,30 @@ gameCounter++;
 
 // comparison of datatypes 
 
-/*
-console.log(2 > 1);
-console.log(2 >= 1);
-console.log(2 <= 1);
-console.log(2 == 1);
-console.log(2 != 1);
 
-avoid kerrna ase comparison ko
+// console.log(2 > 1);
+// console.log(2 >= 1);
+// console.log(2 <= 1);
+// console.log(2 == 1);
+// console.log(2 != 1);
+
+/* 
+avoid this type of  comparison 
 
 console.log("2" > 1);
 console.log("02" > 1);
 
-console.log(null == 0);
-console.log(null > 0);
-console.log(null >= 0);
+console.log(null == 0); // returns false
+console.log(null > 0); // returns false
+console.log(null >= 0); // returns true
 
 console.log(undefined == 0);
 console.log(undefined < 0);
 console.log(undefined > 0);
+*/
 
 // ===
 
 console.log(1 === "1");
-*/
+
 
