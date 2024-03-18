@@ -79,10 +79,10 @@ let str3 = str1 + str2;
 // console.log(str3);
 
 /* 
-console.log("1" + 2);
-console.log(1 + "2");
-console.log("1" + 2 + 2);
-console.log(1 + 2 + "2");
+console.log("1" + 2); // returns 12
+console.log(1 + "2"); // returns 12
+console.log("1" + 2 + 2); // returns 122
+console.log(1 + 2 + "2"); // returns 32
 */
 
 /* 
