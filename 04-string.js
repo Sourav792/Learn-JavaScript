@@ -11,10 +11,10 @@ const gameName = new String('Pubg-battle-ground');
 
 // console.log(gameName);
 // console.log(gameName[0]);
-// console.log(gameName.__proto__);
+// console.log(gameName.__proto__);// returns empty object {}
 // console.log(gameName.length);
 // console.log(gameName.toUpperCase());
-// console.log(gameName.charAt(3));
+// console.log(gameName.charAt(3)); 
 // console.log(gameName.indexOf('b'));
 
 let newStr = gameName.substring(0, 6);
@@ -32,6 +32,6 @@ let url = "https://souravsingh%20webdeveloper";
 // console.log(url.includes('sourav'));
 // console.log(url.includes('hello'));
 
-console.log(gameName.split('-'));
+// console.log(gameName.split('-'));
 
 // strings interpulation best way code in backticks ex.- ` my name is ${Name}`
