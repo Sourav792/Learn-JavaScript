@@ -39,4 +39,4 @@ number = 1000000000000000;
 let min = 100;
 let max = 200;
 
-console.log(Math.floor((Math.random() * (max - min + 1))) + min);
+console.log(Math.floor((Math.random() * ((max - min) + 1))) + min);
