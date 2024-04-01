@@ -15,7 +15,7 @@ let jsUser = {
 }
 
 console.log(jsUser.email);
-console.log(jsUser['email']);
+console.log(jsUser['email']); // access email using square brackets notation
 console.log(jsUser["full name"]);
 
 console.log(jsUser[mySymbol]); // $$$$$$$$$$$$$$$$$$$  important   $$$$$$$$$$$$$$$$$
