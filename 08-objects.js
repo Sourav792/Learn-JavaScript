@@ -1,9 +1,9 @@
 // singleton object = constructer make a singleton objects (but literals not make singleton object)
 // Object.create() // cunstructer method 
-
+let objectName = new Object() // singleton object
 /* 
 let mySymbol = Symbol("key1"); // $$$$$$$$$$$$$$$$$$$$ important js interview $$$$$$$$$$$$$$$
-
+ 
 let jsUser = {
     name: 'saho',
     "full name": "sourav singh",
