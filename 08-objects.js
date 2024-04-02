@@ -141,3 +141,17 @@ console.log(instructor);
 // ]
 
 
+let user = {
+    username: "sourav",
+    email: "sourav@google.com",
+    welcomeMassage: function () {
+      console.log(`${this.username}, welcome to google`);
+      // console.log(this);
+    },
+  };
+  // user.welcomeMassage()
+  // user.username = "gourav"
+  // user.welcomeMassage()
+  
+  // console.log(this); // returns a empty object
+  // browser ka global object = window object
