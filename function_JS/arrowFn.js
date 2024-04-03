@@ -10,11 +10,11 @@ const a2 = a.map(function (s) {
   return s.length;
 });
 
-console.log(a2); // [8, 6, 7, 9]
+// console.log(a2); // [8, 6, 7, 9]
 
 const a3 = a.map((s) => s.length);
 
-console.log(a3); // [8, 6, 7, 9]
+// console.log(a3); // [8, 6, 7, 9]
 
 // No separate this
 // Until arrow functions, every new function defined its own this value (a new object in the case of a constructor, undefined in strict mode function calls, the base object if the function is called as an "object method", etc.). This proved to be less than ideal with an object-oriented style of programming.
@@ -64,17 +64,17 @@ const person2 = new Person();
 // chai()
 
 // let chai = function() {
-//   let usernmae = "sourav"
+//   let username = "sourav"
 //   console.log(this.username); // returns undefined
 // }
 // chai()
 
-let chai = () => {
-  let usernmae = "sourav";
-  console.log(this.username); // returns undefined
-  console.log(this); // returns empty object
-};
-chai();
+// let chai = () => {
+//   let username = "sourav";
+//   console.log(this.username); // returns undefined
+//   console.log(this); // returns empty object
+// };
+// chai();
 
 // explecit returns
 let addTwo = (num1, num2) => {
@@ -87,4 +87,4 @@ let addTwo = (num1, num2) => {
 // implecit returns
 // let addTwo = (num1, num2) => (num1 + num2) ;
 let returnsObject = () => ({ username: "sourav" }); // arrow function ke ander object ko returns kerne k liye object ({object}) ko parenthesis ke under rap kerna padega
-console.log(returnsObject());
+// console.log(returnsObject());
