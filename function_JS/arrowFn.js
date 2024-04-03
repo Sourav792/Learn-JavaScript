@@ -1,6 +1,10 @@
 // ********* Arrow Function ****************
 // An arrow function expression (also called a fat arrow to distinguish from a hypothetical -> syntax in future JavaScript) has a shorter syntax compared to function expressions and does not have its own [ this, arguments, super, or new.target ]. Arrow functions are always anonymous.
 
+// This Keyword in Arrow Function
+// arrow functions have a unique behavior with respect to the this keyword. Unlike regular functions, arrow functions do not have their own this context. Instead, they inherit the this value from the surrounding lexical scope. This behavior is called lexical scoping.
+
+
 // Two factors influenced the introduction of arrow functions: shorter functions and non-binding of this.
 
 // Shorter functions
