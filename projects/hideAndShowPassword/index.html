@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="password_container">
+      <input type="password" name="" id="password" />
+      <span id="eyeIcon"><i class="ri-eye-off-line" id="eye"></i></span>
+    </div>
+
+    <script>
+      let password = document.querySelector("#password");
+      let eye = document.querySelector("#eye");
+      eye.addEventListener("click", () => {
+        if ((password.type == "password")) {
+          password.type = "text";
+          eye.classList.remove("ri-eye-off-line");
+          eye.classList.add("ri-eye-line");
+        } else {
+          password.type = "password";
+          eye.classList.remove("ri-eye-line");
+          eye.classList.add("ri-eye-off-line");
+        }
+      });
+
+              // switch (password.type) {
+        //   case (password.type = "password"):
+        //     password.type = "text";
+        //     eye.classList.remove("ri-eye-off-line");
+        //     eye.classList.add("ri-eye-line");
+        //     break;
+        //   case (password.type = "text"):
+        //     password.type = "password";
+        //     eye.classList.remove("ri-eye-line");
+        //     eye.classList.add("ri-eye-off-line");
+        //     break;
+        //   default:
+        //     break;
+        // }
+    </script>
+  </body>
+</html>
