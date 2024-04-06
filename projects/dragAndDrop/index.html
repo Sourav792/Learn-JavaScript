@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="left_container">
+      <div class="item" draggable="true">:: First Child</div>
+      <div class="item" draggable="true">:: Second Child</div>
+      <div class="item" draggable="true">:: Third Child</div>
+      <div class="item" draggable="true">:: Forth Child</div>
+    </div>
+    <div class="right_container"></div>
+
+    <script>
+      let leftContainer = document.querySelector(".left_container");
+      let rightContainer = document.querySelector(".right_container");
+      let items = document.querySelectorAll(".item"); 
+      console.log(items);
+      for (item of items) {
+        item.addEventListener("dragstart", function (e) {
+          let selected = e.target;
+          rightContainer.addEventListener("dragover", function (e) {
+            e.preventDefault();
+          });
+          rightContainer.addEventListener("drop", function (e) {
+            rightContainer.appendChild(selected);
+            selected = null;
+          });
+          leftContainer.addEventListener("dragover", function (e) {
+            e.preventDefault();
+          });
+          leftContainer.addEventListener("drop", function (e) {
+            leftContainer.appendChild(selected);
+            selected = null;
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
