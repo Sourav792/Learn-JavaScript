@@ -1,4 +1,16 @@
-// filter
+// ++++++++++++++++++ filter +++++++++++++++++
+let codingLanguage = ['javascript','python','ruby','java','c++','PHP']
+
+let languageName = codingLanguage.forEach((language) => {
+  // console.log(language);
+  return language
+})
+console.log(languageName); // returns undefined Becouse
+//  (The forEach method doesn't return an array of the modified elements. It's a void function that performs an action on each element but doesn't store the results anywhere. 
+//  2. You declare the languageName variable but don't assign anything to it. So, it will always be undefined.)
+
+// Filter method: The filter() method of Array instances creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function. 
+// This method is used to create a new array with elements that pass a certain condition.
 
 // let number = [1, 2, 3, 4, 5, 6, 7, 8 ,9 ,10];
 
@@ -30,6 +42,8 @@ let books = [
 
 // console.log(userBooks);
 
+
+// map: This method is used to transform each element of an array using a provided function and returns a new array with the transformed elements.
 let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // let addNumber = number.map((num) => num + 10 )
@@ -46,8 +60,19 @@ let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 //   .filter((num) => num >= 40);
 // console.log(newNumber);
 
-// Reduce method -- The reduce() method of Array instances executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.
+const names = ['Alice', 'Bob', 'Charlie'];
 
+// Map names to their lengths
+const nameLengths = names.map(name => name.length);
+console.log(nameLengths); // Output: [5, 3, 7]
+
+// Map names to uppercase
+const uppercaseNames = names.map(name => name.toUpperCase());
+console.log(uppercaseNames); // Output: ["ALICE", "BOB", "CHARLIE"]
+
+
+// Reduce method -- The reduce() method of Array instances executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.
+// reduce: This method is used to reduce the elements of an array to a single value, by applying a function to each element and accumulating the result.
 
 // reduce method used for ------- shoping cards ------
 
@@ -82,7 +107,17 @@ let shoppingCart = [
 
 let totalShoppingPrice = shoppingCart.reduce((acc, item) => acc + item.price, 0);
 
-console.log(totalShoppingPrice);
+// console.log(totalShoppingPrice);
+
+const numbers = [1, 2, 3, 4, 5];
+
+// Sum of all numbers
+const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // Output: 15
+
+// Concatenate all elements into a single string
+const concatenated = numbers.reduce((acc, curr) => acc + curr.toString(), '');
+console.log(concatenated); // Output: "12345"
 
 
 
