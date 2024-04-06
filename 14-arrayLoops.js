@@ -1,6 +1,27 @@
-// High Order Array Loops
+// ++++++++++++++++ High Order Array Loops +++++++++++++
+
+// for...in iterates over property names.
+//  for...of iterates over property values.
 
 // for of loop
+// The for...of loop iterates over iterable objects such as arrays, strings, maps, sets, etc.
+for (variable of object)
+  statement
+
+  const arr = [3, 5, 7];
+  arr.foo = "hello";
+  
+  for (const i in arr) {
+    console.log(i);
+  }
+  // "0" "1" "2" "foo"
+  
+  for (const i of arr) {
+    console.log(i);
+  }
+  // Logs: 3 5 7
+  
+
 let myArray = [1, 2, 3, 4, 5];
 // for (const iterator of myArray) {
 //     console.log(`array index of: ${iterator}`);
@@ -19,6 +40,14 @@ let myArray = [1, 2, 3, 4, 5];
 //     console.log(greet);
 // }
 
+const obj = { foo: 1, bar: 2 };
+
+for (const [key, val] of Object.entries(obj)) {
+  console.log(key, val);
+}
+// "foo" 1
+// "bar" 2
+
 // Maps -- The Map object holds key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value.
 
 // let map = new Map();
@@ -26,7 +55,7 @@ let myArray = [1, 2, 3, 4, 5];
 // map.set("USA", "United States of Amarica");
 // map.set("FR", "France");
 // map.set("CA", "Canada");
-// map.set("IN", "India"); // 2 entries not allowed
+// map.set("IN", "India"); // 2 entries not allowed (becouse map is unique value)
 
 // console.log(map);
 
@@ -55,6 +84,13 @@ let myArray = [1, 2, 3, 4, 5];
 //     'rb': "ruby",
 //     'swift': "swift by apple"
 // }
+
+// for in loop
+// The for...in loop iterates over the enumerable properties of an object.
+for (variable in object)
+  statement
+
+
 // for (const key in myObject) {
 //      console.log(`${key} shortcut of for ${myObject[key]}`);
 // }
