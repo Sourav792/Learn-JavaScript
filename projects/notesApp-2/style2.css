@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+width: 100%;
+height: 100%; 
+background-color: #56b2f0;
+font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 100px 100px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+.title_container {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.title {
+  color: #fff;
+}
+.title span {
+    margin-right: 10px;
+}
+#create_btn {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 25px;
+    background-color: #000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: .5s color, .5s background-color;
+}
+#create_btn:hover {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px #000;
+}
+.notes_container {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    gap: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+}
+.notes_div {
+    width: 100%;
+    height: fit-content;
+    max-width: 420px;
+    border-radius: 10px;
+}
+.nav {
+    width: 100%;
+    height: 30px;
+    padding: 20px 10px;
+    background: #000;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    align-items: center;
+    border-bottom: 3px solid #fff;
+}
+.nav a {
+    width: 30px;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav a i{
+   font-size: 1.3rem;
+   color: #00a2ff;
+}
+.notes {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px;
+    color: #fff;
+    background: #000;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.notes:focus {
+    outline: none;
+}
+
