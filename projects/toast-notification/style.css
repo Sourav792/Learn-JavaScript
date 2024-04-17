@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.toast {
+  background-color: #000;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: slideIn 0.5s ease-in-out forwards, fadeOut 0.5s ease-in-out forwards 4s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
