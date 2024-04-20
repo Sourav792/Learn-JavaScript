@@ -22,7 +22,7 @@
 ## 4 pillars
 abstraction -- means details hide ker lena (ex:- fetch)
 encapsulation -- 
-interitance --
+inheritance --
 polymorphism --
 
 ## new Keyword functionality 
