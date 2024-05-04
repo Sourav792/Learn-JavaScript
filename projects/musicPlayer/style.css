@@ -1,0 +1,12 @@
+.music-player {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .controls button {
+    margin: 0 10px;
+  }
+
+  .controls input {
+    width: 150px;
+  }
