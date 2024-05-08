@@ -1,0 +1,87 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+width: 100%;
+height: fit-content;
+background-color: #000;
+}
+.nav {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    margin: 100px auto;
+}
+.nav h1 {
+    color: #fff;
+    font-size: 50px;
+}
+.nav form {
+    display: flex;
+    width: 500px;
+    height: 50px;
+}
+#inputText {
+    width: 80%;
+    height: 100%;
+    background-color: #272626;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 20px;
+    color: #fff;
+    font-size: 1rem;
+}
+#inputText::placeholder {
+    color: #fff;
+    font-size: 1rem;
+}
+#inputText:focus {
+    outline: none;
+}
+#searchBtn{
+    background-color: #63d34c;
+    border: none;
+    padding: 10px 25px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#showMoreBtn {
+    background-color: #63d34c;
+    border: none;
+    padding: 10px 25px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: none;   
+}
+#showMoreBtn.active {
+    display: flex;
+}
+
+.images {
+    width: 80%;
+    height: fit-content;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.images a img {
+    width: 100%;
+    height: 230px;
+    border-radius: 10px;    
+    object-fit: cover;
+}
